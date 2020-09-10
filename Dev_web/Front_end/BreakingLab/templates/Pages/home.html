@@ -1,0 +1,53 @@
+{% extends 'Layouts/base.html' %}
+{% load static %}
+{% block content %}
+<div class="home">
+   <div class="black-lives-matter">
+      <div class="black-lives-matter-img">
+         <img src="{% static "images/reverse-logo.png" %}" alt="Logo">
+      </div>
+      <div class="black-lives-matter-content">
+         <h1>Black lives matter</h1>
+         <p>L'équipe BreakingLab est contre les injustices et le racisme.</p>
+         <p>Nous sommes pour l'égalité des chances et la diversité.</p>
+         <p>Ensemble nous pouvons rendre le monde meilleur.</p>
+      </div>
+   </div>
+   <div class="home-cours">
+      <div class="home-cours-img">
+         <img src="{% static "images/cours-logo.png" %}" alt="Logo">
+      </div>
+      <div class="home-cours-content">
+         <h1>La sécurité informatique, un savoir précieux</h1>
+         <p>Perfectionnez vos connaissances en sécurité informatique 
+         grâce à nos cours.</p>
+         <a href="{% url 'cours' %}">En savoir plus</a>
+      </div>
+   </div>
+   <div class="home-laboratoire">
+      <div class="home-laboratoire-img">
+         <img src="{% static "images/tp-logo.png" %}" alt="Logo">
+      </div>
+      <div class="home-laboratoire-content">
+         <h1>Parce que la sécurité informatique se pratique</h1>
+         <p>Des environnements virtuels sont mis à votre disposition
+         pour que vous puissiez mettre en pratique les notions vues 
+         dans les cours</p>
+         <a href="{% url 'laboratoire' %}">En savoir plus</a>
+      </div>
+   </div>
+   <div class="home-nous">
+      <div class="home-nous-img">
+         <img src="{% static "images/nous-logo.png" %}" alt="Logo">
+      </div>
+      <div class="home-nous-content">
+         <h1>A propos de nous</h1>
+         <p>BreakingLab est né de la collaboration de 5 étudiants de
+         l'école d'ingénieur de Télécom SudParis fascinés par le cyber-sécurité.</p>
+         <p>Grâce à un esprit d'équipe et à une détermination hors pair, le rêve 
+         est devenu réalité.</p>
+         <p>Merci beaucoup pour votre soutien.</p>
+      </div>
+   </div>
+</div>   
+{% endblock content %}

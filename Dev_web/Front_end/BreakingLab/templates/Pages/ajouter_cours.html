@@ -1,0 +1,25 @@
+{% extends 'Layouts/base.html' %}
+{% block content %}
+    {% if request.user.is_staff %}
+        <div class="content-signin-signup">
+            <div class="form-signin">
+                {% if form.title.value|length > 0 %}
+                    <h1>Modifier un cours</h1>
+                {% else %}
+                    <h1>Ajouter un cours</h1>
+                {% endif %}
+                <form method="POST">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    {% if form.title.value|length > 0 %}
+                        <button  type="submit" name="button">Modifier</button>
+                    {% else %}
+                        <button  type="submit" name="button">Ajouter</button>
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+    {% else %}
+        <h1>Vous ne faite pas partie des utilisateurs pouvant consulter cette page.</h1>
+    {% endif %}
+{% endblock content %}

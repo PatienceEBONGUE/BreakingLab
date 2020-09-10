@@ -1,0 +1,24 @@
+{% extends 'Layouts/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="content-signin-signup">
+        <div class="form-signin">
+            <h1>{{titre}}</h1>
+            {% comment %} <p>{{description}}<p>  {% endcomment %}
+            <form  method="POST">
+                {% csrf_token %}
+                <input type="text" placeholder="code" name="flag" value="" required>
+                <button class="btn-signin-signup" type="submit" name="button">Valider le code</button>
+                <a href="{% url 'run_sh' laboratoire %}" target="_blank"><button type="button">Lancer le TP</button></a>
+                {% for message in messages %}
+                    {% if message|stringformat:"s" == "Error." %}
+                        <p class="messages">{{ message }}</p>
+                    {% elif message|stringformat:"s" == "Vous avez réussi !" %}
+                        <p class="messages-success">{{ message }}</p>
+                    {% endif %}
+                {% endfor %}        
+            </form>
+        </div>
+    </div>
+    
+{% endblock content %}

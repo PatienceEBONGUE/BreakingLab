@@ -1,0 +1,494 @@
+/* Code copié  */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+/* Fin code copié  */
+
+* {
+	box-sizing: border-box;
+}
+
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	font-family: 'Montserrat', sans-serif;
+	height: 100vh;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 3px 5%;
+	border-bottom: 1px solid black;
+}
+
+.nav li, a, button{
+	font-weight: 1000;
+	font-size: 20px;
+	color: black;
+	text-decoration: none;
+}
+
+.nav li {
+	display: inline-block;
+	padding: 0 30px;
+}
+
+.nav li a:hover {
+	border-bottom: 3px solid black;
+}
+
+.signin-signup button {
+	margin-right: 10px;
+	padding: 9px 25px;
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+
+button:hover {
+	background-color: #e0e0e0;
+}
+
+footer {
+	padding: 0px 5%;
+	text-align: center;
+	border-top: 1px solid black;
+}
+
+.content-signin-signup {
+	flex: 1;
+	background: url('/static/images/fond-signin-signup-opacity.png');
+}
+
+.black-lives-matter {
+	column-count: 2;
+	
+	background-color: black;
+	color: white;
+}
+
+.black-lives-matter-img {	
+	text-align: center;
+}
+
+.black-lives-matter h1 {	
+	margin-top: 10%;
+}
+
+.home-cours {
+	column-count: 2;
+	column-width: 50%;
+}
+
+.home-cours-img {	
+	text-align: center;
+}
+
+.home-cours-content a:hover {
+	border-bottom: 3px solid black;
+}
+
+.home-laboratoire {
+	column-count: 2;
+	
+	background-color: black;
+	color: white;
+}
+
+.home-laboratoire-img {
+	text-align: center;
+}
+
+.home-laboratoire-img img {
+	max-width:200px;
+    height:auto;
+}
+
+.home-laboratoire-content a {
+	color: white;
+}
+
+.home-laboratoire-content a:hover {
+	border-bottom: 3px solid white;
+}
+
+.home-nous {
+	column-count: 2;
+	column-width: 50%;
+}
+
+.home-nous-img {
+	text-align: center;
+}
+
+.home-nous-img img {
+	max-width:550px;
+    height:auto;
+}
+
+.form-signin {
+	margin: 50px auto; 
+	width: 550px;
+	height: auto;
+	background-color: white;	
+	text-align: center;
+	border: 1px solid grey;
+ }
+
+ .form-signup {
+	margin: 50px auto; 
+	width: 550px;
+	height: auto;
+	background-color: white;	
+	text-align: center;
+	border: 1px solid grey;
+ }
+
+ .content-signin-signup h1 {
+	font-size: 40px;
+	margin-bottom: 40px;
+ }
+ 
+ .content-signin-signup input {
+	background: none;
+	text-align: center;
+	padding: 10px 142px;
+	margin: 20px 20px;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	transition: all 0.3s ease 0s;
+ }
+
+ .content-signin-signup input:hover {
+	border-bottom: 2px solid black;
+}
+
+.content-signin-signup button {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 9px 25px;
+	background-color: white;
+	border: 2px solid grey;
+	border-radius: 50px;
+	transition: all 0.3s ease 0s;
+}
+
+.content-signin-signup button:hover {
+	background-color: #e0e0e0;
+	border: 2px solid black;
+}
+
+.content-signin-signup a {
+	border-bottom: 1px solid black;
+	font-size: 15px;
+	transition: all 0.3s ease 0s;
+}
+
+.content-signin-signup a:hover {
+	border-bottom: 1px solid black;
+	color: #4d4d4d;
+}
+ .content-signin-signup input:hover {
+	border-bottom: 2px solid black;
+}
+
+.options {
+	margin-bottom: 30px;
+}
+
+.messages {
+	padding: 10px 10px;
+	margin: 30px 10px;
+	background-color: #f47f7f;
+}
+
+.messages {
+	padding: 10px 10px;
+	margin: 30px 10px;
+	background-color: #f47f7f;
+}
+
+.messages-success {
+	padding: 10px 10px;
+	margin: 30px 10px;
+	background-color: #01c117;
+}
+
+.content-signin-signup a {
+	font-size: 15px;
+}
+
+.content-signin-signup a {
+	border-bottom: 1px solid black;
+	transition: all 0.3s ease 0s;
+}
+
+.content-signin-signup a:hover {
+	border-bottom: 1px solid black;
+	color: #4d4d4d;
+}
+
+.add-lab button {
+	margin-right: 10px;
+	padding: 9px 25px;
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+	margin: 2% 5% 1% 5%;
+}
+
+.add-lab button:hover {
+	background-color: #e0e0e0;
+}
+
+.laboratoires a {
+	display: flex;
+	border: 1px solid black;
+	align-items: center;
+	margin: 1% 5%;
+	padding: 0 5%;
+	justify-content: space-between;
+	transition: all 0.3s ease 0s;	
+}
+
+.laboratoires a:hover {
+	transform:scale(1.05);
+}
+
+.laboratoires img {
+	/* flex:50%; */
+	max-width:13%;
+    height:auto;
+}
+
+.laboratoire-description {
+	display: flex;
+	flex: 20%;
+	flex-direction: column;
+	margin-left: 100px;
+}
+
+/* Liste des cours */
+
+.list_cours{
+	border: 1px black inset; 
+	border-radius: 5px;
+	box-shadow: 4px 4px 4px black;	
+	margin-top: 10px;
+	margin-bottom: 3%;
+	padding: 1% 1% 1%;
+	transition:  0.6s ease-out;	
+	position : relative; 
+	list-style: none;
+	/* width: 430px;
+  	height: 350px; */
+
+}
+
+.list_cours a {outline : none;}
+
+.list_cours a:hover {
+	display : block; 
+	transition: transform .2s; 
+	transform:scale(1.05);
+}
+
+#container_list {
+	display: flex;	
+	flex-flow: row wrap;
+	justify-content: space-around;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+  	
+}
+
+.list_cours img {
+	height: 150px;
+	width: 355px;
+}
+
+
+#cours_description {
+	border: 1px none;
+	padding-bottom: 1px;
+	width: 355px;
+	
+}
+
+#cours_description p {
+	word-wrap: break-word;
+	font-size:15px;
+	color: #706b64;
+}
+
+
+/*  Fin du style de la liste de cours */
+
+/*  Page du cours détail  */
+
+.block-page  {
+    width: 900px;
+    margin: auto;
+}
+
+#edit_cours button {
+	display:inline-block;
+	padding: 9px 25px;
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+  	position: fixed;
+	top: 50%;
+	right : 70px;  
+	margin-right: 180px;
+}
+
+.block-page button {
+	display:inline-block;
+	padding: 9px 25px;
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+  	position: relative;
+	right : 0%;  
+	margin-right: 180px;
+}
+
+#edit_cours button:last-child{
+	margin-right:0px;
+}
+
+#edit_cours p{
+	margin-right: 180px;
+}
+
+
+
+.custom-banner-image {
+	background-size: cover;
+	background-color: #cccccc;  	
+	height: 250px;
+	background-attachment: relative;
+   	background-position: top;
+    background-repeat: no-repeat; 
+
+}
+
+.custom-banner-image h1, .custom-banner-image p{
+  text-align: justify;
+  position: relative;
+  top: 30%;
+  left: 50%;
+  font-weight: bold;
+  transform: translate(-40%, -50%);
+  color: white;
+
+}
+
+
+
+#container_detail {
+	width: 900 px;
+  	margin: auto;
+}
+
+#container_detail img {
+	height: 150px;
+	float: left;
+	
+}
+
+#container_detail h1 {
+	text-transform: uppercase;
+}
+
+
+aside
+{
+    flex: 1.3;
+    position: relative;
+    background-color: #706b64;
+    box-shadow: 0px 2px 5px #1c1a19;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+	font-size: 0.9em;
+}
+
+aside p
+{
+	position: fixed;
+}
+
+section
+{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+/*  Style du text du cours  */
+article, aside
+{
+    text-align: justify;
+}
+
+article
+{
+    margin-right: 20px;
+    flex: 3;
+}
+
+article p, a
+{
+	font-size: 1.0em;
+	outline : none;
+}
+/* Actions sur les liens contenu dans le document */
+article a
+{
+	color: blue;
+	font-style: italic;
+}
+
+article a:hover /* Apparence au survol des liens */
+{
+   text-decoration: underline;
+   color: blue;
+}
+
+article a:active /* Quand le visiteur sélectionne le lien */
+{
+    color: #1c1a19;
+}
+
+/* Fin des actions sur les liens contenu dans le document */
+article b
+{
+	font-weight: bold;
+}
+
+article h3
+{
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+#contact-page {
+	width: 900 px;
+  	margin: auto;
+
+}
+
+/* Fin du style du text du cours */

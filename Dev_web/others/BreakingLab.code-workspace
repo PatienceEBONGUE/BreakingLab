@@ -1,0 +1,15 @@
+{
+    "folders": [
+        {
+            "uri": "sftp://projet:info@wwlan.billysworld.fr/home/projet/pro8445-20-ran-breakinglab/",
+            "name": "SFTP_Dev_Prod"
+        },
+        {
+            "name": "pro8445-20-ran-breakinglab",
+            "path": "/home/parrot/git/pro8445-20-ran-breakinglab"
+        },
+        {
+            "path": "/home/parrot/Dev_BreakingLab"
+        }
+    ]
+}

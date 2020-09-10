@@ -1,0 +1,4 @@
+On peut injecter du code html dans la base de données
+Ainsi on peut par exemple usurper le site et créer son propre formulaire qui envoie vers son propre site et récolter les identifiants de la victime.
+
+On peut aussi injecter des scripts (exemple : <script>alert(1)</script>)

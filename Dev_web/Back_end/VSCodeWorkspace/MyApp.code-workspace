@@ -1,0 +1,7 @@
+{
+    "folders": [{
+        "uri": "sftp://projet:info@wwlan.billysworld.fr?debug=1",
+        "name": "My SFTP folder"
+    }]
+}
+

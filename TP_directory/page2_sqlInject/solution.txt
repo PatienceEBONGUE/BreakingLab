@@ -1,0 +1,5 @@
+Il faut bypasser le mot de passe pour arriver à se connecter.
+Mettre dans login ->    ' or 1=1 -- #
+Et ce qu'on veut dans mot de passe.
+
+On se connectera sous le compte du 1er utilisateur dans la base de données.

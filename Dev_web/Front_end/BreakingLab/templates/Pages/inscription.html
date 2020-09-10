@@ -1,0 +1,19 @@
+{% extends 'Layouts/base.html' %}
+{% block content %}
+    <div class="content-signin-signup">
+        <div class="form-signup">
+            <h1>Inscription</h1>
+            <form method='POST'>
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn-signin-signup" type="submit" name="button">S'Inscrire</button> 
+
+                {% for message in messages %}
+                    <p class="messages">{{ message }}</p>
+                {% endfor %}
+                
+                <p class="options">Vous avez déjà un compte ? <a href="{% url 'connexion' %}">Connectez-vous</a></p>
+            </form>
+        </div>
+    </div>
+{% endblock content %}

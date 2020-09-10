@@ -1,0 +1,28 @@
+{% extends 'Layouts/base.html' %}
+{% load static %}
+{% block content %}
+<div id="container_list">
+    {% if request.user.is_staff %}
+        <div class="add-lab" >
+            <button  type="submit" name="button" onclick="location.href = '{% url 'cours:ajouter_cours' %}'">Ajouter un cours</button>
+        </div>
+    {% endif %}
+    
+    {% for cours in object_list %}
+     <ul class="list_cours">
+        {% with cours.image|slice:"7:" as logo %}   
+            <a href='{{ cours.get_absolute_url }}'>
+            <img src="{% static logo %}"  alt="Logo du cours" title="Un cours pour apprendre plus sur {{ cours.title }} !" />
+        {% endwith %}     
+        <li id="cours_description">
+            <h2><b> {{ cours.title }}</b></h2> 
+            <p> {{ cours.subject }} - {{ cours.level }} </p>
+            <p> {{ cours.description | linebreaks }} </p>
+        </li>
+            </a>
+    </ul>
+    {% endfor %} 
+
+
+</div>      
+{% endblock content %}

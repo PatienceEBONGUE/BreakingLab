@@ -1,0 +1,18 @@
+{% extends 'Layouts/base.html' %}
+{% block content %}
+    {% if request.user.is_staff %}
+        <div class="content-signin-signup">
+            <div class="form-signin">
+            <h1>Ajouter un espace de travail</h1>
+            <form  method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn-signin-signup" type="submit" name="button">Ajouter</button>
+            </form>
+            </div>
+        </div>
+    {% else %}
+        <h1>Vous ne faite pas partie des utilisateurs pouvant consulter cette page.</h1>
+    {% endif %}
+
+{% endblock content %}

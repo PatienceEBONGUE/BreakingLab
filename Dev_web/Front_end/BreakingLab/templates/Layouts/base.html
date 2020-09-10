@@ -1,0 +1,50 @@
+{% load static %}
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    {% comment %} Code copié {% endcomment %}
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% comment %} Fin code copié {% endcomment %}
+
+    <title>{% block title %}BreakingLab{% endblock title %}</title>
+    
+    {% comment %} Code copié {% endcomment %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    {% comment %} Fin code copié {% endcomment %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+  
+  </head>
+    <header>
+      <a href="{% url 'home' %}"><img src="{% static "images/logo40.png" %}" alt="Logo"></a>
+      <nav class="nav">
+        <ul>
+            <li><a href="{% url 'cours:cours' %}">Cours</a></li>
+            <li><a href="{% url 'laboratoire' %}">Laboratoire</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+      </nav>
+
+      {% if user.is_authenticated %}
+        <ul class="signin-signup">
+          <!--<p>Hello, {{ request.user }}</p>-->
+          <a href="{% url 'deconnexion' %}"><button>Deconnexion</button></a>
+          <a href="{% url 'account:profile' %}"><button>Mon compte</button></a>
+        </ul>
+      {% else %}
+        <ul class="signin-signup">
+          <a href="{% url 'connexion' %}"><button>Connexion</button></a>
+          <a href="{% url 'inscription' %}"><button>Inscription</button></a>
+        </ul>
+      {% endif %}
+
+    </header>
+    <body>
+      {% block content %}{% endblock content %}
+    </body>
+    <footer>
+      <p><i>©BreakingLab | Tout droit reservé | 2020</i></p>
+    </footer>
+</html>

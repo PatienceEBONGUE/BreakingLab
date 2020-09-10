@@ -1,0 +1,40 @@
+Les liens  ___________________________________
+1. Références vers une partie du même document 
+
+<p>
+    Aller directement à la partie traitant de :<br />
+    <a href="#cuisine">La cuisine</a><br />
+    <a href="#rollers">Les rollers</a><br />
+    <a href="#arc">Le tir à l'arc</a><br />
+</p>
+<h2 id="cuisine">La cuisine</h2>
+
+<p>... (beaucoup de texte) ...</p>
+
+
+2. Lien vers une ancre située dans une autre page
+
+<h1>Le Mégamix</h1>
+<p>
+    Rendez-vous quelque part sur une autre page :<br />
+    <a href="ancres.html#cuisine">La cuisine</a><br />
+    <a href="ancres.html#rollers">Les rollers</a><br />
+    <a href="ancres.html#arc">Le tir à l'arc</a><br />
+</p>
+
+<h2 id="cuisine">La cuisine</h2>
+
+<p>... (beaucoup de texte) ...</p>
+
+3. Un lien qui ouvre une autre fenêtre 
+
+<p>Bonjour. Souhaitez-vous visiter <a href="https://openclassrooms.com" title="Vous ne le regretterez pas !" target="_blank">OpenClassrooms</a> ?</p>
+______________________________________________________
+
+Les images____________________________________________________________________________
+1. Les figures 
+
+<figure>
+    <img src="images/blocnotes.png" alt="Bloc-Notes" />
+    <figcaption>Le logiciel Bloc-Notes</figcaption>
+</figure>

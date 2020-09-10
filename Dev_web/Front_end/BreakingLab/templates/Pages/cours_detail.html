@@ -1,0 +1,36 @@
+{% extends 'Layouts/base.html' %}
+{% block content %}
+{% load static %}
+{% load bleach_tags %}
+
+<div class = "block-page">
+  {% with object.image|slice:"7:" as logo %}  
+  <div class="custom-banner-image" style="background-image: url('{% static logo %}')";>
+  {% endwith %}  
+      <h1>{{ object.title }}</h1>
+      <p style="font-size:20px;">Niveau : {{ object.level }}</style></p>    
+  </div>
+
+ <section>
+  <article>
+  {% autoescape off %}
+    <p>{{ object.content | linebreaks |bleach }}</p>
+  {% endautoescape %}   
+    </article>
+      {% if request.user.is_staff %}
+      <aside>       
+        <div id="edit_cours">
+          <p> Modifier le : <strong>{{ object.last_modified }}</strong> </p>
+          <button  name="supprimer" onclick="location.href = '{% url 'cours:supprime_cours' id=object.id %}'">Supprimer</a></button> 
+          <button  name="modifier" onclick="location.href = '{% url 'cours:edit_cours' id=object.id %}'">Modifier</a></button> 
+        </div>
+      </aside>
+      {% endif %}
+</section> 
+
+{% if user.is_authenticated %}
+<button name="save_cours" onclick="location.href = '{% url 'account:update_profile' cours_id=object.id  %}'">J'ai fini le cours</a></button> 
+{% endif %}
+</diV>
+
+{% endblock content %}

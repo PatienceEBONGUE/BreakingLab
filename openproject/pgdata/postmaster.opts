@@ -1,0 +1,1 @@
+/usr/lib/postgresql/9.6/bin/postgres "-D" "/var/openproject/pgdata" "-c" "config_file=/etc/postgresql/9.6/main/postgresql.conf"

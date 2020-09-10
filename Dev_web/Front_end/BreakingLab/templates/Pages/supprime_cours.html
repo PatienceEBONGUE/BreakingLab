@@ -1,0 +1,19 @@
+{% extends 'Layouts/base.html' %}
+{% block content %}
+    {% if request.user.is_staff %}
+        <div class="content-signin-signup">
+            <div class="form-signin">
+                <h1>Supprimer un cours</h1>
+                <form action="." method="POST">
+                    {% csrf_token %}
+                    <h1> Voulez-vous vraiment supprimer le cours "{{ object.title }}" ? </h1>
+                    <button class="btn-signin-signup" type="submit" name="supprimer">Supprimer</button> 
+                </form>
+                    <button class="btn-signin-signup" name="annuler" onclick="location.href = '../'">Annuler</a></button>
+                <p> Vous pouvez visusaliser le cours <a href='{{ object.get_absolute_url }}'>{{object.title }} </a>
+            </div>
+        </div>
+    {% else %}
+        <h1>Vous ne faite pas partie des utilisateurs pouvant consulter cette page.</h1>
+    {% endif %}
+{% endblock content %}

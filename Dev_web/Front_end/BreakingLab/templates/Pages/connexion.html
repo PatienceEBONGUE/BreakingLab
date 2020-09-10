@@ -1,0 +1,20 @@
+{% extends 'Layouts/base.html' %}
+{% block content %}
+    <div class="content-signin-signup">
+        <div class="form-signin">
+            <h1>Connexion</h1>
+            <form  method="POST">
+                {% csrf_token %}
+                <input type="text" placeholder="Identifiant" name="username" value="" required>
+                <input type="password" placeholder="Mot de passe" name="password" value="" required>
+                <button class="btn-signin-signup" type="submit" name="button">Se Connecter</button>
+                
+                {% for message in messages %}
+                    <p class="messages">{{ message }}</p>
+                {% endfor %}
+                
+                <p class="options">Vous n'avez pas encore de compte ? <a href="{% url 'inscription' %}">Inscrivez-vous gratuitement</a></p>
+            </form>
+        </div>
+    </div>
+{% endblock content %}

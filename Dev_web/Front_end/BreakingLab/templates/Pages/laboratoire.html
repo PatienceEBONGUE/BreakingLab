@@ -1,0 +1,30 @@
+{% extends 'Layouts/base.html' %}
+{% load static %}
+{% block content %}
+    {% if request.user.is_staff %}
+        <div class=add-lab>
+            <button type="submit" name="button" onclick="location.href = '{% url 'ajouter_laboratoire' %}'">Ajouter un espace de travail</button>
+        </div>
+    {% endif %}
+    <div class=add-lab>
+            <button type="submit" name="button" onclick="location.href = '{% url 'stopContainer' %}'">Fermer les environnements de TP</button>
+    </div>
+    {% for laboratoire in data %}
+        <div class="laboratoires">
+            {% with logo="images/"|add:laboratoire.subject|lower|add:".png" %}
+                <a href="{% url 'laboratoire_home' laboratoire.image %}" target="_blank">
+                    <img src="{% static logo %}" alt="Logo">
+                    <div class="laboratoire-description">
+                        <h1>{{ laboratoire.title }}</h1>
+                        <p>{{ laboratoire.subject }} - {{ laboratoire.level }} - {{ laboratoire.duration }}h</p>
+                        <p>{{ laboratoire.description }}</p>
+                    </div>
+                </a>
+            {% endwith %}
+                {% comment %} <form action="{% url 'run_sh' %}" method="POST" name="{{ laboratoire.title }}">
+                    {% csrf_token %}
+                    <button type="submit">Lancer le laboratoire</button>
+                </form> {% endcomment %}
+        </div>
+    {% endfor %}
+{% endblock content %}
